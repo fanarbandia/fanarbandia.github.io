@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Développeur Web</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <h1>BANDIA <span>FANAR</span> </h1>
+        <nav>
+            <a href="#home" style="color: cyan;">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#projects">Projets</a>
+            <a href="#skills">Compétences</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div>
+            <h1>Je suis <span>Fanar</span>, Développeur en devenir <br> passionné par le web et le design !</h1>
+            <button class="cta-button1" onmouseover="agrandirCarte(this)" onmouseout="reduireCarte(this)"><strong> Voir mes projets</strong></button>
+        </div>
+        <img src="programming-background-collage.jpg" alt="Illustration de deux développeurs travaillant ensemble">
+    </div>
+    <div class="container">
+        
+        <section id="about" class="about-section">
+            <div class="descript">
+                <h2 class="moi">À propos</h2>
+                <div>Je m'appelle <span>BANDIA Fanar</span>, passionné par <br> la création de sites web modernes et interactifs.</div><br>
+                <div>Je suis actuellement étudiant en <span>développement web</span>, <br> et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</div><br>
+                <div>J'adore transformer mes idées en projets concrets <br> et expérimenter avec les nouvelles technologies.</div><br>
+                <button class="download-cv" onmouseover="agrandirCarte(this)" onmouseout="reduireCarte(this)"><strong> Télécharger mon CV</strong></button>
+            </div>
+            <div class="profile-picture">
+                <img src="Ahmadou.jpg" alt="Photo de profil">
+            </div>
+        </section>
+        <section id="projects" class="projects-section">
+            <h2>Mes Projets</h2>
+            <div class="project-cards">
+                <div class="project-card" onmouseover="agrandirCarte(this)" onmouseout="reduireCarte(this)">
+                    <h3>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</h3>
+                    <p>#html，#css，#js</p>
+                    <button class="cta-button">Voir</button>
+                </div>
+                <div class="project-card" onmouseover="agrandirCarte(this)" onmouseout="reduireCarte(this)">
+                    <h3>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</h3>
+                    <p>#html，#css，#js</p>
+                    <button class="cta-button">Voir</button>
+                </div>
+                <div class="project-card" onmouseover="agrandirCarte(this)" onmouseout="reduireCarte(this)">
+                    <h3>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</h3>
+                    <p>#html，#css，#js</p>
+                    <button class="cta-button">Voir</button>
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills-section" >
+            <h2 class="competences">Mes Compétences</h2>
+            <div class="skills-container">
+                <div class="skill-box" onmouseover="agrandirCarte(this)" onmouseout="reduireCarte(this)">
+                    <h3>Soft Skills</h3>
+                    <div>
+                        <p class="titre">Gestion de projet</p>
+                        <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                    </div>
+                    <div>
+                        <p class="titre">Résolution de problème</p>
+                        <div class="skill-bar"><div class="skill-level" style="width: 60%;"></div></div>
+                    </div>
+                    <div>
+                        <p class="titre">Adaptabilité</p>
+                        <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+                <div class="skill-box" onmouseover="agrandirCarte(this)" onmouseout="reduireCarte(this)">
+                    <h3>Hard Skills</h3>
+                    <div>
+                        <p class="titre">HTML</p>
+                        <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                    </div>
+                    <div>
+                        <p class="titre">CSS</p>
+                        <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                    </div>
+                    <div>
+                        <p class="titre">JavaScript</p>
+                        <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+                    </div>
+                    <div>
+                        <p class="titre">VS Code</p>
+                        <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Vous avez un <span>projet en tête ?</span> <br>N'hésitez pas à me <span>contacter</span></h2>
+            <form onsubmit="return validerFormulaire();">
+                <div class="form-group">
+                    <div class="input-field">
+                        <label for="prenom">Votre prénom</label>
+                        <input type="text" id="prenom" placeholder="Cheikh" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="nom">Votre nom</label>
+                        <input type="text" id="nom" placeholder="FALL" required>
+                    </div>
+                </div>
+        
+                <input type="text" placeholder="Votre sujet" required>
+                <textarea placeholder="Écrivez votre message ici" rows="5" required></textarea>
+                <button type="submit" class="Envoie"><strong> Envoyer</strong></button>
+            </form>
+        </section>
+    </div>
+    <script src="test.js"></script>
+    <footer>
+        
+        <div>Réalisé par <SPan>Fanar BANDIA</SPan> avec HTML CSS JS</div><div>© Tous droit réservés -2025</div>
+    </footer>
+</body>
+</html>
