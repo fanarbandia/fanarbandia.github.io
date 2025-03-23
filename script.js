@@ -1,9 +1,8 @@
-
 function validerFormulaire() {
     // Récupérer les valeurs des champs
     const firstName = document.getElementById('prenom').value.trim();
     const lastName = document.getElementById('nom').value.trim();
-    const subject = document.querySelector('input[placeholder="Votre sujet"]').value.trim();
+    const subject = document.querySelector('input[placeholder="Veuillez mettre ici votre sujet"]').value.trim();
     const message = document.querySelector('textarea').value.trim();
 
     // Vérifier si les champs sont remplis
