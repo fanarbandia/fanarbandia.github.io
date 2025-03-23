@@ -5,6 +5,34 @@ function validerFormulaire() {
     const subject = document.querySelector('input[placeholder="Veuillez mettre ici votre sujet"]').value.trim();
     const message = document.querySelector('textarea').value.trim();
 
+
+  // Réinitialiser les messages d'erreur
+    document.getElementById('prenomError').textContent = '';
+    document.getElementById('nomError').textContent = '';
+    document.getElementById('sujetError').textContent = '';
+    document.getElementById('messageError').textContent = '';
+
+    let isValid = true;
+
+    // Vérification pour le prénom (uniquement des lettres)
+    if (!/^[a-zA-Z]+$/.test(firstName)) {
+        document.getElementById('prenomError').textContent = 'Veuillez entrer uniquement des lettres !';
+        isValid = false;
+    }
+
+    // Vérification pour le nom (uniquement des lettres)
+    if (!/^[a-zA-Z]+$/.test(lastName)) {
+        document.getElementById('nomError').textContent = 'Veuillez entrer uniquement des lettres !';
+        isValid = false;
+    }
+
+    // Vérification pour le sujet (uniquement des lettres)
+    if (!/^[a-zA-Z]+$/.test(subject)) {
+        document.getElementById('sujetError').textContent = 'Veuillez entrer uniquement des lettres !';
+        isValid = false;
+    }
+
+    
     // Vérifier si les champs sont remplis
     if (!firstName || !lastName || !subject || !message) {
         alert("Veuillez remplir tous les champs.");
